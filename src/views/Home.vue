@@ -1,18 +1,33 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <h1>Home</h1>
+    <CustomText>Salam</CustomText>
+    <CustomText tag="p">Salam</CustomText>
+    <CustomText tag="p" size="xsmall">Salam</CustomText>
+    <CustomText tag="p" size="xxsmall">Salam</CustomText>
+    <IconHome width="20" height="20" />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import CustomText from '@/components/CustomText'
+import IconHome from '../icons/home.svg'
 
 export default {
-  name: "Home",
+  name: 'Home',
   components: {
-    HelloWorld
+    CustomText,
+    IconHome
   }
-};
+}
 </script>
+
+<style scoped>
+h1 {
+  color: red;
+
+  @media (--t) {
+    color: blue;
+  }
+}
+</style>
