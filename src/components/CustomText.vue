@@ -25,6 +25,7 @@ export default {
 
 <style scoped>
 .normal {
+  font-size: 14px;
 }
 .small {
   font-size: 12px;
