@@ -24,7 +24,9 @@
           <ExploreFill v-if="$route.name === 'Explore'" />
           <Explore v-else />
         </router-link>
-        <router-link to="/profile">Profile</router-link>
+        <router-link to="/profile">
+          <Avatar size="26px" />
+        </router-link>
       </nav>
     </Container>
   </header>
@@ -32,6 +34,8 @@
 
 <script>
 import Container from '@/components/Container'
+import Avatar from '@/components/Avatar'
+
 import IconHome from '@/icons/home.svg'
 import IconHomeFill from '@/icons/home-fill.svg'
 import IconDirect from '@/icons/direct.svg'
@@ -43,6 +47,7 @@ export default {
   name: 'MainHeader',
   components: {
     Container,
+    Avatar,
     IconHome,
     IconHomeFill,
     IconDirect,
